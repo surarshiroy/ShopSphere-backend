@@ -43,6 +43,7 @@ public class SecurityConfig {
                         .permitAll()
 
                         .requestMatchers("/auth/**").permitAll()
+
                         .requestMatchers(
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**"
@@ -75,6 +76,8 @@ public class SecurityConfig {
                                 "/api/product/**")
                         .hasAuthority("ROLE_ADMIN")
                         .requestMatchers("/api/me")
+                        .authenticated()
+                        .requestMatchers("/api/payment/**")
                         .authenticated()
                         .anyRequest()
                         .authenticated()
