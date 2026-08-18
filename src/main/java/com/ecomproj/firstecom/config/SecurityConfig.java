@@ -122,7 +122,7 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(
                 List.of("http://localhost:5173",
-                        "https://shop-sphere-frontend-n4ov.vercel.app")
+                        "https://shopsphere-surarshi.vercel.app")
         );
 
         configuration.setAllowedMethods(
